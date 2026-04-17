@@ -126,10 +126,17 @@
       gap: 24px;
     }
     .work-card {
+      display: block;
       background-color: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 8px;
       padding: 28px;
+      color: var(--color-text);
+      transition: border-color 0.2s ease, transform 0.15s ease;
+    }
+    .work-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-2px);
     }
     .work-card .work-label {
       color: var(--color-accent);
@@ -156,7 +163,7 @@
       .stat-row { gap: 32px; }
 }
   </style>
-  <link rel="stylesheet" crossorigin href="/assets/styles-FxfGth_D.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-BGlXnlwF.css">
 </head>
 <body>
 
@@ -214,21 +221,21 @@
           <div class="accent-line"></div>
         </div>
         <div class="recent-work-grid">
-          <div class="work-card">
-            <div class="work-label">Latest Single</div>
-            <h3>Receive Your Glory</h3>
-            <p>One of our first fully in-house recordings. This one was born in a Sunday morning worship set and we wanted to capture the energy of the room it came from. It's a declaration of surrender and an invitation for God's presence.</p>
-          </div>
-          <div class="work-card">
+          <a href="music.html#king-of-glory" class="work-card">
             <div class="work-label">Latest Single</div>
             <h3>King of Glory</h3>
             <p>Another in-house recording that really marks a new season for us. It's bold and anthemic, built for congregations to sing loud. Same team, same room, same heart.</p>
-          </div>
-          <div class="work-card">
-            <div class="work-label">Foundation</div>
-            <h3>Living Stones</h3>
-            <p>The album that started it all. Recorded at Attic Studio, <em>Living Stones</em> set the tone for what Clay Collective would sound like: honest lyrics, singable melodies, and arrangements that serve the song and the congregation.</p>
-          </div>
+          </a>
+          <a href="music.html#receive-your-glory" class="work-card">
+            <div class="work-label">Single</div>
+            <h3>Receive Your Glory</h3>
+            <p>Years in the making, only recently finalized. Some songs take time to become what they're supposed to be. This is one of them.</p>
+          </a>
+          <a href="music.html#living-stones" class="work-card">
+            <div class="work-label">EP</div>
+            <h3>Pour out Your Spirit</h3>
+            <p>Our latest EP. <em>Pour Out Your Spirit</em> is a collection of songs written and refined in our local church gatherings: an invitation for God's presence to move among his people.</p>
+          </a>
         </div>
       </div>
     </section>
@@ -309,15 +316,6 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Story CTA -->
-    <section class="section section-alt">
-      <div class="container text-center">
-        <h2>Our Story</h2>
-        <p class="text-muted mt-16" style="max-width: 540px; margin-left: auto; margin-right: auto;">Clay Collective is more than a project. It's a family of worship leaders, musicians, and creatives from churches across the region, all pulling in the same direction.</p>
-        <a href="story.html" class="btn btn-primary mt-24">Read Our Story</a>
       </div>
     </section>
   </main>
