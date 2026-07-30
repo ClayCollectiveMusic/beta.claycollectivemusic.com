@@ -138,13 +138,27 @@
       background-color: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: 8px;
-      padding: 28px;
+      /* Padding lives on .work-card-body so the album art can run edge to edge. */
+      overflow: hidden;
       color: var(--color-text);
       transition: border-color 0.2s ease, transform 0.15s ease;
     }
     .work-card:hover {
       border-color: var(--color-accent);
       transform: translateY(-2px);
+    }
+    /* Square — album covers are 1:1. Reserved up front so art loading can't shift layout. */
+    .work-card-art {
+      aspect-ratio: 1 / 1;
+      background-color: var(--color-bg);
+    }
+    .work-card-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .work-card-body {
+      padding: 24px 28px 28px;
     }
     .work-card .work-label {
       color: var(--color-accent);
@@ -161,6 +175,7 @@
       color: var(--color-text-muted);
       font-size: 0.95rem;
       line-height: 1.7;
+      margin-bottom: 0;
     }
     @media (max-width: 768px) {
       .hero-home { padding: 60px 0 48px; }
@@ -171,7 +186,7 @@
       .stat-row { gap: 32px; }
 }
   </style>
-  <link rel="stylesheet" crossorigin href="/assets/styles-C7O2xDmF.css">
+  <link rel="stylesheet" crossorigin href="/assets/styles-Reh9FZA6.css">
 </head>
 <body>
 
@@ -187,7 +202,7 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="story.html">Our Story</a></li>
       <li><a href="music.html">Music</a></li>
-      <li><a href="https://shop.tbsonlinestore.com/product-category/clay-collective/" target="_blank" rel="noopener" class="nav-external">Merch &rarr;</a></li>
+      <li><a href="merch.html">Merch</a></li>
     </ul>
   </div>
 </nav>
@@ -228,22 +243,57 @@
           <h2>Recent Work</h2>
           <div class="accent-line"></div>
         </div>
+        
         <div class="recent-work-grid">
-          <a href="music.html#king-of-glory" class="work-card">
-            <div class="work-label">2026</div>
-            <h3>King of Glory</h3>
-            <p>Another in-house recording that really marks a new season for us. It's bold and anthemic, built for congregations to sing loud.</p>
-          </a>
-          <a href="music.html#receive-your-glory" class="work-card">
-            <div class="work-label">2025</div>
-            <h3>Receive Your Glory</h3>
-            <p>Years in the making, only recently finalized. Some songs take time to become what they're supposed to be. This is one of them.</p>
-          </a>
-          <a href="music.html#living-stones" class="work-card">
-            <div class="work-label">2025</div>
-            <h3>Pour out Your Spirit</h3>
-            <p>Our latest EP. <em>Pour out Your Spirit</em> is a collection of songs written and refined in our local church gatherings: an invitation for God's presence to move among his people.</p>
-          </a>
+          
+            
+            
+              <a href="music.html#king-of-glory" class="work-card">
+                
+                  <div class="work-card-art">
+                    <img src="https://cdn.claycollectivemusic.com/media/King%20of%20Glory%20(2026)/folder.jpg" alt="King of Glory album art" loading="lazy" />
+                  </div>
+                
+                <div class="work-card-body">
+                  <div class="work-label">2026</div>
+                  <h3>King of Glory</h3>
+                  <p>Our latest release, a powerful proclamation of Jesus the coming King.</p>
+                </div>
+              </a>
+            
+          
+            
+            
+              <a href="music.html#receive-your-glory" class="work-card">
+                
+                  <div class="work-card-art">
+                    <img src="https://cdn.claycollectivemusic.com/media/Receive%20Your%20Glory%20(2025)/folder.jpg" alt="Receive Your Glory album art" loading="lazy" />
+                  </div>
+                
+                <div class="work-card-body">
+                  <div class="work-label">2025</div>
+                  <h3>Receive Your Glory</h3>
+                  <p>Years in the making, our first self-produced release centers on exalting the only One truly worthy of honor.</p>
+                </div>
+              </a>
+            
+          
+            
+            
+              <a href="music.html#pour-out-your-spirit" class="work-card">
+                
+                  <div class="work-card-art">
+                    <img src="https://cdn.claycollectivemusic.com/media/Pour%20out%20Your%20Spirit%20(2025)/folder.jpg" alt="Pour out Your Spirit album art" loading="lazy" />
+                  </div>
+                
+                <div class="work-card-body">
+                  <div class="work-label">2025</div>
+                  <h3>Pour out Your Spirit</h3>
+                  <p>These songs cry out for a fresh move of the Holy Spirit, kingdom harvest, and unending praise.</p>
+                </div>
+              </a>
+            
+          
         </div>
       </div>
     </section>
@@ -319,8 +369,8 @@
           <div class="card">
             <div class="card-body">
               <h3>Merch</h3>
-              <p>Rep the collective. T-shirts, hats, and more, all available through our online store.</p>
-              <a href="https://shop.tbsonlinestore.com/product-category/clay-collective/" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Shop Now</a>
+              <p>T-shirts, hats, and more, offered at cost through our print partner.</p>
+              <a href="merch.html" class="btn btn-outline btn-sm">Shop Now</a>
             </div>
           </div>
         </div>
@@ -360,7 +410,7 @@
           <h4>More</h4>
           <ul>
             <li><a href="story.html">Our Story</a></li>
-            <li><a href="https://shop.tbsonlinestore.com/product-category/clay-collective/" target="_blank" rel="noopener">Shop Merch</a></li>
+            <li><a href="merch.html">Merch</a></li>
           </ul>
         </div>
         <div class="footer-links-group">
